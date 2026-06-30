@@ -51,12 +51,9 @@ I run my own fleet of servers and take projects all the way from an empty folder
 
 <div align="center">
 
-<img src="./profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Profile details"/>
-
 <img src="./profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="Repos per language"/>
 <img src="./profile-summary-card-output/tokyonight/2-most-commit-language.svg" alt="Most commit language"/>
 
-<img src="./profile-summary-card-output/tokyonight/3-stats.svg" alt="Stats"/>
 <img src="./profile-summary-card-output/tokyonight/4-productive-time.svg" alt="Productive time"/>
 
 </div>
