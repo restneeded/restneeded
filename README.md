@@ -90,10 +90,10 @@ restneeded@github:~$ sudo ./deploy.sh
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=restneeded&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&ring_color=00ff41" alt="GitHub stats"/>
+<img height="170" src="https://ghstats.rest.dedyn.io/api?username=restneeded&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&ring_color=00ff41" alt="GitHub stats"/>
 <img height="170" src="https://streak-stats.demolab.com?user=restneeded&hide_border=true&background=0D1117&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=00ff41&sideLabels=00ff41&dates=8b949e&excludeDaysLabel=8b949e" alt="GitHub streak"/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=restneeded&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9" alt="Top languages"/>
+<img height="170" src="https://ghstats.rest.dedyn.io/api/top-langs/?username=restneeded&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9" alt="Top languages"/>
 
 </div>
 
@@ -103,7 +103,7 @@ restneeded@github:~$ sudo ./deploy.sh
 
 <div align="center">
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=restneeded&theme=matrix&no-frame=true&no-bg=true&margin-w=4&column=7)
+![Trophies](https://ghstats.rest.dedyn.io/trophy/?username=restneeded&theme=matrix&no-frame=true&no-bg=true&margin-w=4&column=7)
 
 </div>
 
