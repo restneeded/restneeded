@@ -10,7 +10,7 @@
 
 <a href="https://x.com/scuffedrest"><img src="https://img.shields.io/badge/X%20%40scuffedrest-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
 <a href="https://discord.gg/restnow"><img src="https://img.shields.io/badge/discord.gg%2Frestnow-111111?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/></a>
-<img src="https://komarev.com/ghpvc/?username=restneeded&label=profile%20views&color=ffffff&style=for-the-badge" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=restneeded&label=profile%20views&color=000000&style=for-the-badge" alt="Profile views"/>
 
 </div>
 
