@@ -1,0 +1,77 @@
+name: Profile assets (snake + streak)
+
+# Third-party streak hosts flake under GitHub's image proxy.
+# We snapshot the SVG onto the `output` branch (same as snake) so the profile
+# always loads from raw.githubusercontent.com.
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate monochrome snake SVG
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#ffffff&color_dots=#000000,#161b22,#30363d,#6e7681,#c9d1d9,#ffffff
+
+      - name: Snapshot streak SVG (B/W)
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          # demolab often times out; try heroku mirror first, then demolab.
+          URLS=(
+            'https://github-readme-streak-stats.herokuapp.com/?user=restneeded&theme=highcontrast&hide_border=true'
+            'https://github-readme-streak-stats.herokuapp.com/?user=restneeded&theme=dark&hide_border=true'
+            'https://streak-stats.demolab.com/?user=restneeded&theme=highcontrast&hide_border=true'
+          )
+          ok=0
+          for URL in "${URLS[@]}"; do
+            for i in 1 2 3; do
+              if curl -fsSL --max-time 40 --retry 1 \
+                -A 'Mozilla/5.0 restneeded-profile-assets' \
+                "$URL" -o dist/streak.svg; then
+                if grep -q '<svg' dist/streak.svg && grep -qiE 'streak|contribution' dist/streak.svg; then
+                  echo "ok from $URL"
+                  ok=1
+                  break 2
+                fi
+              fi
+              echo "attempt failed for $URL ($i)"
+              sleep $((i * 3))
+            done
+          done
+          if [ "$ok" != "1" ]; then
+            echo "WARN: could not refresh streak.svg"
+            if [ ! -s dist/streak.svg ]; then
+              cat > dist/streak.svg <<'EOF'
+          <svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
+            <rect width="495" height="195" fill="#000"/>
+            <text x="24" y="100" fill="#fff" font-family="monospace" font-size="16">streak refresh pending</text>
+          </svg>
+          EOF
+            fi
+          fi
+          ls -la dist/
+          head -c 200 dist/streak.svg || true
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
