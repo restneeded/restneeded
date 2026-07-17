@@ -86,7 +86,8 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 <!-- Self-hosted stats (ghstats.rest.dedyn.io). Public vercel.app mirrors often 503. -->
 <img height="165" src="https://ghstats.rest.dedyn.io/api?username=restneeded&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=000000&title_color=ffffff&text_color=c0c0c0&icon_color=ffffff&ring_color=ffffff" alt="GitHub stats"/>
-<img height="165" src="https://streak-stats.demolab.com/?user=restneeded&theme=dark&hide_border=true&background=000000&ring=FFFFFF&fire=FFFFFF&currStreakNum=FFFFFF&sideNums=C0C0C0&currStreakLabel=FFFFFF&sideLabels=C0C0C0&dates=808080" alt="streak"/>
+<!-- Streak: highcontrast B/W theme. Avoid heavy custom color params (break on GitHub camo). -->
+<img height="165" src="https://streak-stats.demolab.com/?user=restneeded&theme=highcontrast&hide_border=true&date_format=M%20j%5C,%20Y" alt="GitHub streak"/>
 
 <br/>
 
