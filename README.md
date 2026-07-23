@@ -45,6 +45,7 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 | project | what it is |
 | :--- | :--- |
+| [**secure-email-gateway**](https://github.com/restneeded/secure-email-gateway) | Self-hosted email encryption. `[secure]` in the subject → body + attachments go to a portal. Password + email OTP. Admin panel included. |
 | [**rest-monopoly**](https://github.com/restneeded/rest-monopoly) | Multiplayer 3D board game. Land on property → real-time FPS **Rent Gulag**. Server owns the money. |
 | [**cyber-rest**](https://github.com/restneeded/cyber-rest) | Lightweight Cyberpunk 2077 multiplayer free-roam / PvP framework |
 | [**deskthing**](https://github.com/restneeded/deskthing) | Control surface for a jailbroken Spotify Car Thing |
@@ -84,9 +85,7 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 <div align="center">
 
-<!-- Self-hosted stats (ghstats.rest.dedyn.io). Public vercel.app mirrors often 503. -->
 <img height="165" src="https://ghstats.rest.dedyn.io/api?username=restneeded&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=000000&title_color=ffffff&text_color=c0c0c0&icon_color=ffffff&ring_color=ffffff" alt="GitHub stats"/>
-<!-- Streak is snapshotted to the output branch (same as snake). Live demolab URLs flake. -->
 <img height="165" src="https://raw.githubusercontent.com/restneeded/restneeded/output/streak.svg" alt="GitHub streak"/>
 
 <br/>
