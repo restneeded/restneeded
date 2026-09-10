@@ -8,8 +8,7 @@
 
 <br/>
 
-<a href="https://x.com/scuffedrest"><img src="https://img.shields.io/badge/X%20%40scuffedrest-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
-<a href="https://discord.gg/restnow"><img src="https://img.shields.io/badge/discord.gg%2Frestnow-111111?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/></a>
+<a href="https://x.com/N3WR3ST"><img src="https://img.shields.io/badge/X%20%40N3WR3ST-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
 <img src="https://komarev.com/ghpvc/?username=restneeded&label=profile%20views&color=000000&style=for-the-badge" alt="Profile views"/>
 
 </div>
@@ -122,7 +121,7 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 ### hit me up
 
-[X](https://x.com/scuffedrest) · [Discord](https://discord.gg/restnow) · open an issue on any public repo
+[X](https://x.com/N3WR3ST) · open an issue on any public repo
 
 <br/>
 
