@@ -1,8 +1,8 @@
-name: Profile assets (snake + streak)
+name: Profile assets (snake + streak + stats)
 
-# Third-party streak hosts flake under GitHub's image proxy.
-# We snapshot the SVG onto the `output` branch (same as snake) so the profile
-# always loads from raw.githubusercontent.com.
+# Third-party card hosts flake or die under GitHub's image proxy.
+# Everything is snapshotted onto the `output` branch so the profile always loads
+# from raw.githubusercontent.com. A failed refresh keeps the previous file.
 
 on:
   schedule:
@@ -20,6 +20,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Seed dist with the last published assets
+        run: |
+          mkdir -p dist
+          if git fetch --depth=1 origin output; then
+            git archive FETCH_HEAD | tar -x -C dist
+          fi
+          ls -la dist
+
       - name: Generate monochrome snake SVG
         uses: Platane/snk/svg-only@v3
         with:
@@ -42,8 +52,9 @@ jobs:
             for i in 1 2 3; do
               if curl -fsSL --max-time 40 --retry 1 \
                 -A 'Mozilla/5.0 restneeded-profile-assets' \
-                "$URL" -o dist/streak.svg; then
-                if grep -q '<svg' dist/streak.svg && grep -qiE 'streak|contribution' dist/streak.svg; then
+                "$URL" -o /tmp/streak.svg; then
+                if grep -q '<svg' /tmp/streak.svg && grep -qiE 'streak|contribution' /tmp/streak.svg; then
+                  mv /tmp/streak.svg dist/streak.svg
                   echo "ok from $URL"
                   ok=1
                   break 2
@@ -54,7 +65,7 @@ jobs:
             done
           done
           if [ "$ok" != "1" ]; then
-            echo "WARN: could not refresh streak.svg"
+            echo "WARN: could not refresh streak.svg, keeping the last published copy"
             if [ ! -s dist/streak.svg ]; then
               cat > dist/streak.svg <<'EOF'
           <svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
@@ -66,6 +77,12 @@ jobs:
           fi
           ls -la dist/
           head -c 200 dist/streak.svg || true
+
+      - name: Render stats, top languages and activity cards
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/cards.py dist ${{ github.repository_owner }}
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4

@@ -84,12 +84,12 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 <div align="center">
 
-<img height="165" src="https://ghstats.rest.dedyn.io/api?username=restneeded&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=000000&title_color=ffffff&text_color=c0c0c0&icon_color=ffffff&ring_color=ffffff" alt="GitHub stats"/>
+<img height="165" src="https://raw.githubusercontent.com/restneeded/restneeded/output/stats.svg" alt="GitHub stats"/>
 <img height="165" src="https://raw.githubusercontent.com/restneeded/restneeded/output/streak.svg" alt="GitHub streak"/>
 
 <br/>
 
-<img height="165" src="https://ghstats.rest.dedyn.io/api/top-langs/?username=restneeded&layout=compact&langs_count=8&hide_border=true&bg_color=000000&title_color=ffffff&text_color=c0c0c0" alt="top languages"/>
+<img height="165" src="https://raw.githubusercontent.com/restneeded/restneeded/output/top-langs.svg" alt="top languages"/>
 
 </div>
 
@@ -99,7 +99,7 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 <div align="center">
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=restneeded&bg_color=000000&color=ffffff&line=ffffff&point=c0c0c0&area=true&hide_border=true&custom_title=contribution%20activity" alt="activity graph"/>
+<img width="100%" src="https://raw.githubusercontent.com/restneeded/restneeded/output/activity.svg" alt="activity graph"/>
 
 </div>
 
