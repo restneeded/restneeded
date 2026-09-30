@@ -8,6 +8,7 @@
 
 <br/>
 
+<a href="https://rest.ac"><img src="https://img.shields.io/badge/rest.ac-websites%20%2B%20SEO-000000?style=for-the-badge&labelColor=000000" alt="rest.ac"/></a>
 <a href="https://x.com/N3WR3ST"><img src="https://img.shields.io/badge/X%20%40N3WR3ST-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
 <img src="https://komarev.com/ghpvc/?username=restneeded&label=profile%20views&color=000000&style=for-the-badge" alt="Profile views"/>
 
@@ -22,6 +23,8 @@
 **Rest.** Production software, game security, multiplayer systems, and the ops that keep them alive.
 
 I run my own VPS fleet. A lot of client work stays private on purpose. Public repos are the slice you can actually click.
+
+Small business websites and SEO go through **[Rest Services](https://rest.ac)**. Every job is quoted up front.
 
 </div>
 
@@ -121,7 +124,7 @@ I run my own VPS fleet. A lot of client work stays private on purpose. Public re
 
 ### hit me up
 
-[X](https://x.com/N3WR3ST) · open an issue on any public repo
+[rest.ac](https://rest.ac) · [X](https://x.com/N3WR3ST) · open an issue on any public repo
 
 <br/>
 
